@@ -3,6 +3,7 @@
 namespace AppBundle\Entity\MemberSummary;
 
 use AppBundle\Entity\Summary;
+use AppBundle\Summary\SummaryItemPositionableInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -10,7 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Entity
  * @ORM\Table(name="member_summary_job_experiences")
  */
-class JobExperience
+class JobExperience implements SummaryItemPositionableInterface
 {
     /**
      * @var int|null
